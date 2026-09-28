@@ -1,0 +1,89 @@
+Controlled and Uncontrolled components
+
+Difference between State and Refs?
+React has two major tools that managing state and ui behaviour those are state and refs.
+State is the source of truth, state manages the data to make the ui dynamic.
+
+-> created a counter component
+
+State:
+-> every time we click the increment button , the state of the count increments and state updates and triggers re-rendering in react, shows the updated value in the Ui.
+-> state is reactive.
+-> manage via useState hook
+
+Refs:
+-> normally react is declarative.
+-> Refs let you access and manipulate the DOM elements.
+-> also allows you to access persistent values without triggering re-renders. values updated but not cause any re-render.
+
+tackle value - useState
+tackle behaviour of DOM - useRef
+
+state changes -> comp re-render instantly
+value changes in useref -> value saved but no re-render in comp -> ui does not updating when we clicks on ref incrementing, but value of current is updating.
+
+when i click force re-render then i re-render of update the sibling tree if it has any changes, as per my observation like if count increased with ref and not updated in ui, then force-renders then value of ref count is also updating . w/o any changes if force re-render ref tree is not shaking.
+
+
+As per the messy component:
+The message is the main concern the which is with the useRef, it does not updates the state instantly.
+-> so state is not good, so validation is hard based on the value.
+
+Controlled Components pattern:
+-> In React inputs, values, textareas are controlled components in the react so they must handle using the state only.  controlled components need to re-render.
+
+Cleaning codes:
+-> make the messsage as state variable.
+-> when are multiple state variables are there for a single form, make it as a single state object.
+
+
+
+but when to use the ref:
+state is for the values, ref is for the DOM level behaviour.
+Whenever i submit the code, when form has nothing. then it should not submit .
+it needs to focus on the input of the first unfilled , for that purpose we need to use it currently.
+
+
+Added refs for all inputs if not filled it will auto-focus there.
+
+Uncontrolled way of handling Components:
+
+-> There are no states for the components, only uses the useRefs , use when pages dont need any re-renders.
+
+-> another way for Uncontrolled components is the plain html and JS format no state and no refs at the inputs.
+
+Usecases:
+-> controlled used a place where large forms, validations, data driven components and state managements and production grade.
+
+-> Uncontrolled used at the prototypes, not much data driven applications.
+
+pitfalls:
+-> state + refs dont use in unnecesarily like,  use as above that's ok. 
+
+-> when u have single input and send it to server then no need any state , directly sent to server. where directly use the plain html. best for tiny , simple forms
+
+-> for large forms are hard to maintain and test using the Uncontrolled.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

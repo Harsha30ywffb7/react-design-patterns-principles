@@ -1,0 +1,44 @@
+Container-Presenter pattern:
+
+What are the code smells?
+SRP - single responsibilty property violation
+
+1. A single component must only do a single work.
+
+In the first component it is fetching posts, user profile,  form-logic, loading, doing everything in a single component. This single page causes too much rendering.
+
+2. There is no reusabilty - Error component, loading those are reusable.
+
+3. There are no tests for components.
+
+Solution:
+Container-Presenter pattern
+
+Messy component  ----------> Container component 
+(
+Container component:
+1. it handles all sort of data handling and fetching and never involves in rendering ui
+2. manages the data, responsible for passing data to Presenter component
+)
+
+Sometimes the presenter might may be big sometimes, then break it into smaller components.
+
+now are re-writing components:
+1. userprofilecontainer - only displays and handles loading the user profile data.
+2. userprofilePresenter - only shows the ui for the user.
+3. making another reusable loading and error components.
+4. user profile and posts are splitting into separate components.
+5. now everything is updated in this different single components in a cleaner way and each component has only one single functionality.
+6. folder structure also aligned in a correct format as per the project.
+
+Usecases:
+1. uses when data fetching from api's.
+2. multistep form validations and dashboards, etc.
+
+pitfalls: where we dont use it?
+1. for the simple components like loaders we dont need it.
+2. dont use when the props are too many and levels more to pass the data.
+
+tasks:
+
+

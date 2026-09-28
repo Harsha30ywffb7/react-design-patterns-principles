@@ -1,0 +1,18 @@
+React is a declarative , component based javascript library for building frameworks. 
+
+declarative: if you ask someone to do something, they make sure complete the thing, without asking
+you much more things about the task.
+like: u asked your mom to make the coffe, she will complete task w/o need of asking you sugar, coffee these instructions.
+
+imperative: Ask someone to do a work based on your instructions.
+in imperative programming, you describe what you want by specifying all the instructions on how to do it.
+
+Why React is declarative?
+A: if we ask it do something, it will implements, it knows how to implement every thing in ground level in dom.
+
+two components talk with each other by passing data known as props.
+
+user-interface library: it contains all the applications like routing, notifications, auth, state management and etc.
+
+why design patterns?
+something like rules or patterns to develop things in better way.
