@@ -1,0 +1,32 @@
+The props soup:
+
+In the modal we created there is lack of flexibility that's the main problem.
+every time based on the future usage we need to update the props of the modal. that causes codesmells.
+Already the modal is doing both presenter and container things. 
+SRP violation here.
+
+Hard to reuse and scalable, tightly coupled props , modal component is rigid.
+
+To resolve it we will follow the Compound Patterns:
+how the modal looks like --> check the reference image in the assets.
+
+Now we need to update our messy modal properly
+
+In newly created modal doesn't violates any SRP.
+They all are belongs to same context, Header, footer, body related to same modal outside the modal there is no use of it.
+The tiny modal components are modal sub components. so we can create the same sub components in the single file. if needed write it as the separate.
+
+The super power of this modal is, we can fill whatever we want and much more scalable and flexibility.
+
+usecases:
+-> any component where we have layout and subitems matters then we need to use it.
+
+pitfalls:
+-> never add the sub components un-necessarily.
+-> avoid the re-export the subcomponents. Export a single component.
+
+tasks:
+-> create a card, with header, footer, body and image in it.
+
+
+#task do same for the accordians using the above method, but here a Item it takes some title and content as props.
