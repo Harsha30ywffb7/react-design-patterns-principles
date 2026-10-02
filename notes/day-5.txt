@@ -1,0 +1,20 @@
+
+How higher order functions looks like?
+- A function can take a function as an argument || a function returns a function || a function can do both
+
+With higher orders functions we can do more than just execution of particular function.
+HOF returns a new functions with a extra enhancement and behaviour, this is all can reuse.
+
+- HOC
+- use with for the naming convention in the HOF.
+
+usecases:
+- use when multiple components share same logic.
+- data fetching, authentication, etc..
+
+pitfall:
+- mostly these are in the legacy codes.
+- modern replacement of it is hooks.
+- HOF causes composition hell harder to debug
+
+- hooks replaced the render props and HoF's

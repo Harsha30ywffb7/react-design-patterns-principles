@@ -1,0 +1,22 @@
+The problem?
+
+Imagine we have two comp one car and bike, with our mouse pointer track the position .
+
+Created a messy code, with same logic duplicated across the components never re-used it.
+
+Render props pattern: 
+
+it takes controll on a render.
+it expects a functions a as a prop returns a jsx.
+
+as per example, both codes are same but car has some things and bike has something different those are rendered properly. by reusing the code.
+
+We can make this code better my using children that code messy like this.
+
+usecases:
+useful for the writing reusable components. better to use while maintain the legacy code.
+
+Pitfall:
+this pattern is great but not good. every render new function creates and also testing the code is harder.
+
+-> to stop the multiple re-renders we can use the hooks.
